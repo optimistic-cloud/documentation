@@ -20,7 +20,19 @@ export default defineConfig({
         ]
       },
       {
-        text: 'External Services',
+        text: 'Services',
+        items: [
+          { text: 'Vaultwarden', link: '/vaultwarden' },
+          { text: 'Opengist', link: '/opengist' },
+          { text: 'Papra', link: '/papra' },
+          { text: 'Gitea', link: '/gitea' },
+          { text: 'Pocket ID', link: '/pocket-id' },
+          { text: 'Immich', link: '/immich' },
+          
+        ]
+      },
+      {
+        text: 'External Services & Infrastructure',
         items: [
           { text: 'IONOS', link: '/ionos' },
           { text: 'Healthchecks.io', link: '/healthchecks.io' },
