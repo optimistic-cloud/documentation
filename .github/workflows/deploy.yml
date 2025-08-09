@@ -42,14 +42,6 @@ jobs:
       - name: Build with VitePress
         run: pnpm docs:build
 
-      - name: Show build output
-        run: |
-          ls -la .
-          ls -la .vitepress || true
-          ls -la docs/.vitepress || true
-          ls -la .vitepress/dist || true
-          ls -la docs/.vitepress/dist || true
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
