@@ -5,6 +5,7 @@ export default defineConfig({
   title: "optimistic cloud",
   description: "Documentation",
   themeConfig: {
+    logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -28,7 +29,7 @@ export default defineConfig({
           { text: 'Gitea', link: '/gitea' },
           { text: 'Pocket ID', link: '/pocket-id' },
           { text: 'Immich', link: '/immich' },
-          
+
         ]
       },
       {
