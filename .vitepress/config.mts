@@ -18,6 +18,13 @@ export default defineConfig({
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' }
         ]
+      },
+      {
+        text: 'External Services',
+        items: [
+          { text: 'IONOS', link: '/ionos' },
+          { text: 'Healthchecks.io', link: '/healthchecks.io' }
+        ]
       }
     ],
 
