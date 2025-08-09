@@ -5,7 +5,6 @@ export default defineConfig({
   title: "optimistic cloud",
   description: "Documentation",
   themeConfig: {
-    logo: './logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -39,6 +38,9 @@ export default defineConfig({
           { text: 'Healthchecks.io', link: '/healthchecks.io' },
           { text: 'Hetzner', link: '/hetzner' }
         ]
+      },
+      {
+        text: 'Tutorials'
       }
     ],
 
