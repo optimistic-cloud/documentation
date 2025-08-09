@@ -32,6 +32,17 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Workloads',
+        items: [
+          { text: 'ThinkCentre M700', link: '/m700' },
+          { text: 'Raspberry Pi 4', link: '/rpi4' },
+          { text: 'Raspberry Pi 2b', link: '/rpi2b' },
+          { text: 'Raspberry Pi Zero 2W', link: '/rpi-zero2w' },
+          { text: '2 x Dell Optiplex 3080', link: '/optiplex-3080' },
+          { text: 'Dell PowerEdge R340', link: '/poweredge-r340' },
+        ]
+      },
+      {
         text: 'External Services & Infrastructure',
         items: [
           { text: 'IONOS', link: '/ionos' },
