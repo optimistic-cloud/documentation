@@ -23,7 +23,8 @@ export default defineConfig({
         text: 'External Services',
         items: [
           { text: 'IONOS', link: '/ionos' },
-          { text: 'Healthchecks.io', link: '/healthchecks.io' }
+          { text: 'Healthchecks.io', link: '/healthchecks.io' },
+          { text: 'Hetzner', link: '/hetzner' }
         ]
       }
     ],
