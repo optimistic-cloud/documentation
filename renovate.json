@@ -1,0 +1,76 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)"
+  ],
+  "timezone": "Europe/Berlin",
+  "labels": ["dependencies", "renovate"],
+  "rangeStrategy": "bump",
+  "rebaseWhen": "behind-base-branch",
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5,
+  "dependencyDashboard": true,
+  "ignorePaths": [
+    "public/**",
+    "dist/**",
+    ".vuepress/dist/**",
+    ".vitepress/dist/**"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vuepress", "@vuepress/*"],
+      "groupName": "vuepress core & plugins",
+      "separateMultipleMajor": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": [
+        "vue",
+        "vue-router",
+        "@vitejs/plugin-vue",
+        "vite",
+        "webpack",
+        "webpack-cli"
+      ],
+      "groupName": "frontend toolchain",
+      "separateMultipleMajor": true
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["major"],
+      "labels": ["major", "breaking-change"],
+      "stabilityDays": 3
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 6am on monday"],
+    "branchTopic": "lock-file-maintenance"
+  },
+  "schedule": ["before 6am on monday"],
+  "commitBodyTable": true
+}
