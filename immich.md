@@ -1,5 +1,11 @@
 # Immich
 
+
+## Update checklist / next Ansible playbook
+
+- run replication
+- create local snapshot
+
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
 ## Syntax Highlighting
